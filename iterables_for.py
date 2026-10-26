@@ -34,13 +34,15 @@ print(string_ejemplo, 'tiene longitud', longitud)
 for _ in range(5):          # <range> es otro tipo iterable
     print("Ja", end='')     # Escribimos JaJaJaJaJa
 
-# Si bien solemos usar <for> para hacer recorridas "completas" (es decir, de principio a fin) y recurrimos al <while> cuando creemos que podemos encontrar
-# una situación que amerite hacer lo contrario, podemos interrumpir el proceso haciendo uso de <break>. 
+# Si bien solemos usar <for> para hacer recorridas "completas" (es decir, de principio a fin) y recurrimos al <while> 
+# cuando creemos que podemos encontrar una situación que amerite hacer lo contrario, podemos 
+# interrumpir el proceso haciendo uso de <break>. 
 # 
 # En este ejemplo, vamos a tratar de detectar si este string contiene un signo '$'. Si es así, no seguimos revisándolo.
 for c in 'No tengo $ para comprar pavadas':
     if c == '$':
         break
 else:
-    print('Esto no va a ocurrir')       # ESTO RARA VEZ SE USA: se puede colocar una sentencia <else> luego de un <for>. Su contenido se ejecuta ÚNICAMENTE si el <for> termina normalmente, 
-                                        # es decir, no mediante el uso de un <break>. Incluyo este ejemplo únicamente por completitud, pero insisto en que no es algo que necesiten saber.
+    print('Esto no va a ocurrir')       # ESTO RARA VEZ SE USA: se puede colocar una sentencia <else> luego de un <for>. Su contenido se
+                                        # ejecuta ÚNICAMENTE si el <for> termina normalmente, es decir, no mediante el uso de un <break>.
+                                        # Incluyo este ejemplo únicamente por completitud, pero insisto en que no es algo que necesiten saber.
