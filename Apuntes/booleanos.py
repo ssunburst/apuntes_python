@@ -46,6 +46,7 @@ print(f'Como {n} = {2 * n} es falso, {n} ≠ {2 * n} tiene que ser {n != 2 * n}'
 print(f'Como es cierto que {n} < 10, también debe serlo {n} ≤ 10: {n <= 10}')
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------
+print(f'\n{'*'*80}\n{'*'*80}\n')
 
 # OPERADORES LÓGICOS
 
@@ -59,7 +60,66 @@ print(f'Como es cierto que {n} < 10, también debe serlo {n} ≤ 10: {n <= 10}')
 
 # - or
 #   A or B es verdadero cuando A, B o los dos a la vez son verdaderos.
-print('3 es mayor que 2183123 o es igual a 3:', 3 > 2183123 or 3 == 3)  # los operadores lógicos tienen menor prioridad que los de comparación
+print('Verdadero o Verdadero:\t', True or True)
+print('Verdadero o Falso:\t', True or False)
+print('Falso o Verdadero:\t', False or True)
+print('Falso o Falso:\t\t', False or False)
+
+print()
+
+print('(3 es mayor que 2183123) o (3 es igual a 3):', 3 > 2183123 or 3 == 3)  # los operadores lógicos tienen menor prioridad que los de comparación
 #   Como consecuencia de lo anterior, A or B es falso únicamente cuando tanto A como B son falsos.
-print('3 es mayor que diez o 3 es distinto a 3:', 3 > 2183123 or 3 != 3)
+print('(3 es mayor que diez) o (3 es distinto a 3):', 3 > 2183123 or 3 != 3)
+
+print(f'\n{'-'*60}\n')
+
+# - and
+#   A and B es verdadero sólo cuando tanto A como B son verdaderos; es falso en cualquier otro caso.
+
+print('Verdadero y Verdadero:\t', True and True)
+print('Verdadero y Falso:\t', True and False)
+print('Falso y Verdadero:\t', False and True)
+print('Falso y Falso:\t\t', False and False)
+
+print()
+print('(3 es mayor que 2183123) y (3 es igual a 3):', 3 > 2183123 and 3 == 3)
+print('(3 es MENOR que 2183123) y (3 es igual a 3):', 3 < 2183123 and 3 == 3)
+
+print(f'\n{'-'*60}\n')
+
+# - not
+# not A es verdadero cuando A es falso, y es falso cuando A es verdadero. En otras palabras, not
+# "da vuelta" el valor de aquello sobre lo que es usado.
+
+print('No Verdadero:\t\t', not True)
+print('No Falso:\t\t', not False)
+# Como posiblemente se estén imaginando "dar vuelta" dos veces algo hace que vuelta a su valor original
+print("No (No Verdadero):\t", not not True)
+print("No (No Falso):\t\t", not not False)
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------
+print(f'\n{'*'*80}\n{'*'*80}\n')
+
+# Es interesante ver cómo muchas cosas pueden ser escritas de manera diferente pero logrando un resultado equivalente.
+
+x = 5
+y = 10
+# Decir que "x es menor o igual a y" es lo mismo que decir "x es menor que y o x es igual a y".
+print('x ≤ y:', x <= y, '\t\t(x < y) o (x = y):', x < y or x == y)
+# Si x es menor o igual a y, entonces NO puede ser mayor
+print('x ≤ y:', x <= y, '\t\tno (x > y):', not x > y)
+# Si un número es igual a otro, entonces no puede ser mayor Y no puede ser menor
+print('x = x:', x == x, '\t\t[no (x > x)] y [no (x < x)]:', (not (x < x)) and (not (x > x)))
+
+
+
+
+
+
+
+
+
+
+
+
 
