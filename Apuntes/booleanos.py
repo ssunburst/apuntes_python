@@ -111,7 +111,30 @@ print('x ≤ y:', x <= y, '\t\tno (x > y):', not x > y)
 # Si un número es igual a otro, entonces no puede ser mayor Y no puede ser menor
 print('x = x:', x == x, '\t\t[no (x > x)] y [no (x < x)]:', (not (x < x)) and (not (x > x)))
 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------
+print(f'\n{'*'*80}\n{'*'*80}\n')
 
+# PRECEDENCIA
+
+# Análogamente a como ocurre con los operadores numéricos (piensen en lo que pasa, por ejemplo, con la suma y la multiplicación), los operadores
+# lógicos tienen un orden de prioridad.
+
+# De mayor a menor:
+#   1 - not
+#   2 - and
+#   3 - or
+
+# Así, escribir <A or B and C> es equivalente a <A or (B and C)> (porque and tiene más prioridad que or), pero posiblemente distinto a
+# <(A or B) and C>. Decimos posiblemente porque el resultado PODRÍA llegar a ser el mismo (piensen en qué pasa si A, B Y C son verdaderos),
+# pero ciertamente no siempre.
+
+a = True
+b = True
+c = False
+print('A:', a, '\tB:', b, '\tC:', c)
+print('(A o B) y C:\t', (a or b) and c) # Si queremos que el or se aplique antes, tenemos que usar paréntesis
+print('A o B y C:\t', a or b and c)
+print('A o (B y C):\t', a or (b and c)) # Los paréntesis en este caso son redundantes, pero a veces ayudan a la claridad visual
 
 
 
